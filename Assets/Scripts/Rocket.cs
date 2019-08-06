@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Rocket : MonoBehaviour
 {
@@ -33,8 +34,9 @@ public class Rocket : MonoBehaviour
         {
             case "Friendly":
                 break;
-            case "Cunt":
-                Application.LoadLevel(Application.loadedLevel);
+            default:
+                SceneManager.LoadScene("Level 1");
+                //Application.LoadLevel(Application.loadedLevel);
                 break;
         }
     }
